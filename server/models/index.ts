@@ -1,4 +1,4 @@
-import { UserModel } from './User';
+import { UserModel } from './user';
 import * as Sequelize from 'sequelize';
 import { SearchModel } from './search';
 
