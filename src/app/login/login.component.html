@@ -1,0 +1,43 @@
+<div>
+  <div>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="selectedTab === LoginTabs.LogIn" (click)="selectTab(LoginTabs.LogIn)">LogIn</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="selectedTab === LoginTabs.SignIn" (click)="selectTab(LoginTabs.SignIn)">SignIn</a>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <form [formGroup]="loginForm" *ngIf="selectedTab === LoginTabs.LogIn" (ngSubmit)="login()">
+      <div>
+        <input formControlName="username" type="text" placeholder="UserName">
+      </div>
+      <div>
+        <input formControlName="password" type="password" placeholder="Password">
+      </div>
+      <button>LogIn</button>
+    </form>
+    <form [formGroup]="signInForm" *ngIf="selectedTab === LoginTabs.SignIn" (ngSubmit)="signIn()">
+      <div>
+        <input formControlName="username" type="text" placeholder="UserName">
+      </div>
+      <div>
+        <input formControlName="password" type="password" placeholder="Password">
+      </div>
+      <div>
+        <input formControlName="confirmPassword" type="password" placeholder="Confirm Password">
+      </div>
+      <button>SignIn</button>
+    </form>
+  </div>
+  <div>
+    <div>
+      <button #googleLoginButton>SignIn with Google</button>
+    </div>
+    <div>
+      <button (click)="FBLogin()">SignIn with Facebook</button>
+    </div>
+  </div>
+</div>
