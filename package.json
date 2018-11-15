@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build_app": "ng build --prod && tsc -p server",
-    "run_app": "node dist/server.js"
+    "run_app": "node dist/server.js",
+    "postinstall": "npm run build_app && npm run run_app"
   },
   "private": true,
   "dependencies": {
