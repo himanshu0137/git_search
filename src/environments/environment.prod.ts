@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  baseApi: 'https://search-server-guy.herokuapp.com'
 };

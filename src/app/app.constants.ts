@@ -1,4 +1,6 @@
-export const apiPoint = 'http://localhost:3000';
+import { environment } from '../environments/environment';
+
+export const apiPoint = environment.baseApi;
 
 export const FBConfig = {
     appId: '1685300921784810',
