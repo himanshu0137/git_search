@@ -19,8 +19,8 @@
   </ul>
 </div>
 <div class="row" *ngIf="!!searchResult">
-  <div class="col-sm-6">
-    <div class="card" *ngFor="let result of searchResult">
+  <div class="col-sm-6" *ngFor="let result of searchResult">
+    <div class="card">
       <div class="card-body">
         <h5 class="card-title"><a target="_blank" href="{{result.url}}">{{result.name}}</a></h5>
         <h6 class="card-subtitle mb-2 text-muted"><a target="_blank" href="{{result.owner.url}}">{{result.owner.name}}</a></h6>

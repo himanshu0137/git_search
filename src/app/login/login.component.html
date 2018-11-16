@@ -1,5 +1,5 @@
-<div>
-  <div>
+<div class="h-100">
+  <div class="row">
     <ul class="nav nav-tabs">
       <li class="nav-item">
         <a class="nav-link" [class.active]="selectedTab === LoginTabs.LogIn" (click)="selectTab(LoginTabs.LogIn)">LogIn</a>
@@ -9,7 +9,7 @@
       </li>
     </ul>
   </div>
-  <div>
+  <div class="row">
     <form [formGroup]="loginForm" *ngIf="selectedTab === LoginTabs.LogIn" (ngSubmit)="login()">
       <div>
         <input formControlName="username" type="text" placeholder="UserName">
@@ -17,7 +17,7 @@
       <div>
         <input formControlName="password" type="password" placeholder="Password">
       </div>
-      <button>LogIn</button>
+      <button class="btn btn-info">LogIn</button>
     </form>
     <form [formGroup]="signInForm" *ngIf="selectedTab === LoginTabs.SignIn" (ngSubmit)="signIn()">
       <div>
@@ -29,15 +29,15 @@
       <div>
         <input formControlName="confirmPassword" type="password" placeholder="Confirm Password">
       </div>
-      <button>SignIn</button>
+      <button class="btn btn-info">SignIn</button>
     </form>
   </div>
-  <div>
+  <div class="row">
     <div>
-      <button #googleLoginButton>SignIn with Google</button>
+      <button class="btn" #googleLoginButton>SignIn with Google</button>
     </div>
     <div>
-      <button (click)="FBLogin()">SignIn with Facebook</button>
+      <button class="btn" (click)="FBLogin()">SignIn with Facebook</button>
     </div>
   </div>
 </div>
