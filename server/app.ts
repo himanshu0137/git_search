@@ -163,6 +163,7 @@ app.get('/search/history', passport.authenticate('jwt', { session: false }),
       where: {
         user: req.user.id
       },
+      group: ['term'],
       order: [['createdAt', 'DESC']],
       limit: 5
     }).then(result =>

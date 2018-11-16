@@ -14,7 +14,7 @@
       <a class="nav-link disabled">Search History :-</a>
     </li>
     <li class="nav-item" *ngFor="let term of searchHistory">
-      <a class="nav-link">{{term}}</a>
+      <a class="nav-link" href="javascript:void(0)" (click)="historySearch(term)">{{term}}</a>
     </li>
   </ul>
 </div>
