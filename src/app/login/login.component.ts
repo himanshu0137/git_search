@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2, ElementRef, OnDestroy, ViewChild } from '@angular/core';
+import { Component, OnInit, Renderer2, ElementRef, OnDestroy, ViewChild, NgZone } from '@angular/core';
 import { FBConfig, API, GoogleConfig } from '../app.constants';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -32,7 +32,8 @@ export class LoginComponent implements OnInit, OnDestroy
     private httpClient: HttpClient,
     private fb: FormBuilder,
     private router: Router,
-    private userService: UserService) { }
+    private userService: UserService,
+    private ngZone: NgZone) { }
 
   ngOnInit()
   {
@@ -156,7 +157,7 @@ export class LoginComponent implements OnInit, OnDestroy
 
   private redirectToDashboard()
   {
-    this.router.navigateByUrl('/dashboard');
+    this.ngZone.run(() => this.router.navigateByUrl('/dashboard'));
   }
 }
 enum LoginTabs
