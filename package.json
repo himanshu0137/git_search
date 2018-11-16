@@ -44,7 +44,8 @@
     "rxjs": "^6.3.3",
     "sequelize": "^4.41.2",
     "tedious": "^3.0.1",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "express": "^4.16.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.10.0",
