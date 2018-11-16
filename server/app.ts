@@ -41,7 +41,7 @@ sequelize
   });
 
 // Express configuration
-app.set('port', 3000);
+app.set('port', process.env.PORT || 3000);
 app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

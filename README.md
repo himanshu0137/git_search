@@ -5,5 +5,4 @@
 
     To run the project run the following commands
     - npm install
-    - npm run build_app
-    - npm run run_app
+    - npm start
